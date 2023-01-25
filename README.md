@@ -23,23 +23,23 @@ Build the project
 
 Install all the dependencies using composer
 
-    docker-compose exec app composer install
+    docker-compose exec php composer install
 
 Generate a new application key
 
-    docker-compose exec app php artisan key:generate
+    docker-compose exec php php artisan key:generate
 
 Run the database migrations (**Set the database connection in .env before migrating**)
 
-    docker-compose exec app php artisan migrate
+    docker-compose exec php php artisan migrate
 
 Run the databse seeder
 
-    docker-compose exec app php artisan db:seed
+    docker-compose exec php php artisan db:seed
 
 Run Task import command
 
-    docker-compose exec app php artisan task:get
+    docker-compose exec php php artisan task:get
 
 
 You can now access the server at http://todolist.localhost/
