@@ -11,13 +11,15 @@ services:
       - ./source:/var/www/html:delegated
       - ./compose/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
-      - php
+      - app
       - mysql
 
-  php:
+  #Php Service
+
+  app:
     build:
       context: ./compose/php
-    container_name: ${APP_NAME}_php
+    container_name: ${APP_NAME}_app
     ports: 
       - "9000:9000"
     volumes:

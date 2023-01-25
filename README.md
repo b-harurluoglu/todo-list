@@ -7,6 +7,10 @@ Clone the repository
 
     git clone git@github.com:b-harurluoglu/todo-list.git
 
+Switch to the repo folder
+
+    cd todo-list
+
 Copy the example env file and make the required configuration changes in the .env file
 
     cp .env.example .env
@@ -26,15 +30,15 @@ Generate a new application key
 
 Run the database migrations (**Set the database connection in .env before migrating**)
 
-    docker-compose exec php php artisan migrate
+    docker-compose exec app php artisan migrate
 
 Run the databse seeder
 
-    docker-compose exec php php artisan db:seed
+    docker-compose exec app php artisan db:seed
 
 Run Task import command
 
-    docker-compose exec php php artisan task:get
+    docker-compose exec app php artisan task:get
 
 
 You can now access the server at http://todolist.localhost/
