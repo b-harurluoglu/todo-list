@@ -14,31 +14,7 @@
   <body>
     <div class="container mt-5">
       <div class="row justify-content-center"> 
-        {{-- 
-        <div class="col-4">
-          <table class="table table-sm table-striped table-hover">
-            <thead class="table-dark">
-                <tr>
-                <th scope="col">#</th>
-                <th scope="col">İşin Adı</th>
-                <th scope="col">Zorluk Derecesi</th>
-                <th scope="col">Süre</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($tasks as $task)
-                <tr>
-                  <th scope="row">{{ $loop->iteration }}</th>
-                  <td>{{ $task->name }}</td>
-                  <td>{{ $task->level }}</td>
-                  <td>{{ $task->duration }}</td>
-                </tr>
-                @endforeach
-            </tbody>
-          </table>
-        </div>
-        --}}
-        <div class="col-8">
+        <div class="col-9">
           @foreach($plans as $plan)
           <table class="table table-sm table-success table-striped table-hover">
             <thead class="table-gray">
@@ -58,7 +34,7 @@
                 @foreach($developers as $developer)
                   <td>
                     @foreach($plan as $task)
-                      @if($task['developer'] == $developer->name)
+                      @if($task['developer'] == $developer->id)
                       {{ $task['task'] }} <br>
                       @endif
                     @endforeach
