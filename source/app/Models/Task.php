@@ -25,7 +25,7 @@ class Task extends Model
                         $plans->push(
                             [
                                 'week'      => $week,
-                                'developer' => $developer->name,
+                                'developer' => $developer->id,
                                 'task'      => $task->name,
                             ]
                         );
